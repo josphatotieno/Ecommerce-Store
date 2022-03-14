@@ -1,8 +1,10 @@
 const navbar = document.querySelector('.container');
+const product_titles = document.querySelectorAll('.product-title');
 const products = document.querySelectorAll('.product-name');
 const shoes = document.querySelectorAll('.shoe-name');
 const shirts = document.querySelectorAll('.shirt-name');
 const dresses = document.querySelectorAll('.dress-name');
+const search = document.querySelector('#search');
 const searches = document.querySelectorAll('.search');
 
 window.onscroll = () => {
@@ -12,6 +14,20 @@ window.onscroll = () => {
         navbar.classList.remove('top')
     }
 }
+
+console.log(document.querySelector('.product-title').textContent);
+product_titles.forEach(title => {
+    const search = document.querySelector('#search');
+    console.log(search.value);
+
+    search.addEventListener('keyup', (e) => {
+        if(title.textContent.toLowerCase().indexOf(search.value) != -1) {
+            title.parentElement.parentElement.style.display = 'block'
+        } else {
+            title.parentElement.parentElement.style.display = 'none';
+        }
+    })
+})
 
 searches.forEach(search => {
     if(search.classList.contains('search-shoes')) {

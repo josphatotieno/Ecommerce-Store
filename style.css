@@ -112,6 +112,7 @@ header {
 .showcase {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100%;
 }
 
@@ -481,6 +482,28 @@ footer {
 .socials .fa:not(:last-child) {
     margin-right: 14px;
 }
+
+/* @keyframes fadeIn {
+    0% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(100%);
+    
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        transform: translateX(0);
+
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+} */
 
 @media (min-width: 501px) and (max-width: 768px) {
     .main-header {
