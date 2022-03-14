@@ -1,0 +1,567 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: color .6s ease-in-out;
+}
+
+header {
+    background: url(Images/Shoes/BlacknWhite\ _Sneakers.jpg) no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 30px;
+    background-color: #000;
+    color: #fff;
+    transition: all .5s ease-in-out;
+}
+
+.container.top {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0px 2px 5px 4px rgb(33 22 22 / 10%);
+    z-index: 10;
+}
+
+.container.top a {
+    color: #000;
+}
+
+.main-header span,
+.showcase-wrapper h2 {
+    color: #2196f3;;
+}
+
+.navbar li:not(:last-child) {
+    margin-right: 25px;
+}
+
+.navbar li {
+    padding-bottom: 10px;
+    transition: color .6s ease-in-out;
+}
+
+#dropdown {
+    position: relative;
+}
+
+#dropdown ul li {
+    display: block;
+}
+
+#dropdown ul {
+    display: none;
+    opacity: 0;
+    transition: opacity .6s ease-in-out;
+}
+
+#dropdown ul a {
+    color: rgb(0, 0, 0);
+}
+
+#dropdown ul a:hover {
+    color: rgb(25, 148, 230);
+}
+
+#dropdown:hover ul {
+    position: absolute;
+    width: 135px;
+    padding: 20px 0 0 15px;
+    margin-top: 7px;
+    display: block;
+    opacity: 1;
+    background-color: #d3dfd5;
+    box-shadow: 2px 3px 3px 3px rgba(52, 51, 53, 0.15);
+}
+
+.navbar li a:hover {
+    color: #2196f3;
+}
+
+.menu-wrapper {
+    display: none;
+}
+
+.showcase {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.showcase-wrapper {
+    text-align: center;
+    justify-self: center;
+}
+
+.showcase-wrapper h2,
+.showcase-wrapper p {
+    margin-bottom: 15px;
+}
+
+.showcase-wrapper p {
+    font-size: 70px;
+    color: #fff;
+}
+
+.showcase-wrapper button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 15px 40px;
+    background-color: #2196f3;;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.showcase-wrapper button .fa-shopping-cart {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.showcase-wrapper button:hover {
+    transform: scale(.98);
+}
+
+/* Products */
+.products {
+    padding: 100px 0 0;
+}
+
+.products-title {
+    display: flex;
+    justify-content: space-between;
+    padding:0 30px 20px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #ececec;
+}
+
+.products-title a {
+    cursor: pointer;
+    color: rgb(219, 19, 19);
+}
+
+.products-search {
+    padding: 0 30px 0;
+}
+
+.products-search input,
+.shoes-search input,
+.shirts-search input,
+.dresses-search input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 30px;
+    box-shadow: 1px 2px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.products-search input {
+    margin: 0;
+}
+
+.products-search input::placeholder,
+.shoes-search input::placeholder {
+    color: royalblue;
+}
+
+.products-items {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.product-item {
+    cursor: pointer;
+    border: 1px solid #efebeb;
+    box-shadow: 1px 3px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.product-item:hover {
+    transform: scale(.99);
+}
+
+.product-item img {width: 100%;}
+
+.product-info {
+    padding: 25px 20px;
+}
+
+.product-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.product-name p:first-child {color: blue;}
+
+.product-name p:nth-child(2) {font-weight: bold;}
+
+.product-rate {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.product-rate {
+    color: rgb(219, 19, 19);
+}
+
+.product-item button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 15px 40px;
+    margin-top: 20px;
+    background-color: rgb(39 2 2);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.product-item button:focus {
+    transform: scale(.97)
+}
+
+/* Shoes */
+#shoes-wrapper {
+    margin-bottom: 90px;
+    padding: 50px 30px;
+    background-color: #efefef;
+}
+
+.shoes-title,
+.shirts-title,
+.dresses-title {
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shoes-search input {
+    margin: 0;
+}
+
+.shoes-items,
+.shirts-items,
+.dresses-items {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+
+.shoe-item .product-info {
+    background-color: #fff;
+}
+
+.shoe-img,
+.shirt-img,
+.dress-img {
+    height: 240px;
+}
+
+.shoe-img img,
+.shirt-img img,
+.dress-img img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Shirts */
+.shirts-wrapper {
+    margin-bottom: 90px;
+    padding: 50px 30px;
+    background-color: #efefef;
+}
+
+/* Dresses */
+.dresses-wrapper {
+    margin-bottom: 90px;
+    padding: 50px 30px;
+    background-color: #efefef;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.pagination div {
+    padding: 15px 20px;
+    border: 1px solid #ececec;
+}
+
+.pagination div:first-child {
+    background-color: #f51919;
+    color: #fff;
+}
+
+.pagination div:not(:last-child) {
+    margin-right: 15px;
+}
+
+/* Products Page */
+.filter {
+    justify-content: center;
+}
+
+.filter p:not(:last-child) {
+    margin-right: 25px;
+}
+
+/* About Page */
+
+/* .image-wrapper {
+    position: relative;
+}
+
+.image-wrapper .socials {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+} */
+
+/* .member:hover .socials {
+    background-color: rgba(236, 16, 16, 0.842);
+    opacity: 1;
+} */
+
+
+.contact-form {
+    padding: 100px;
+}
+
+.contact-title {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ececec;
+    margin-bottom: 30px;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.form-wrapper {
+    grid-column: 1 / span 2;
+}
+
+.form-wrapper input,
+textarea {
+    outline: none;
+    border: 1px solid #ececec;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+textarea {resize: none;}
+
+.form-wrapper input::placeholder,
+textarea::placeholder {
+    color: #1980f5;
+}
+
+.form-wrapper input:focus,
+textarea:focus {
+    outline: 1px solid #1980f5;
+}
+
+.form-wrapper div {
+    margin-bottom: 20px;
+}
+
+.form-wrapper button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 15px 40px;
+    background-color: rgb(224, 31, 31);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.info-title .accordion {
+    padding: 15px 0;
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+}
+
+.info-title label {
+    margin-bottom: 25px;
+    color: #1980f5;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.accordion input {
+    display: none;
+}
+
+.accordion-content {
+    /* opacity: 0; */
+    max-height: 0;
+    overflow: hidden;
+    transition: all .6s ease-in-out;
+    z-index: -1;
+}
+
+
+input:checked ~ .accordion-content {
+    /* display: block; */
+    opacity: 1;
+    max-height: 400px;
+}
+
+/* Footer */
+footer {
+    padding: 30px 100px;
+    background-color: #000;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-wrapper p {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.socials .fa {
+    cursor: pointer;
+    padding: 15px;
+    font-size: 20px;
+    background-color: #fff;
+    color: rgb(219, 19, 19);
+    border-radius: 5px;
+}
+
+.socials .fa:not(:last-child) {
+    margin-right: 14px;
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+    .main-header {
+        margin-bottom: 12px;
+    }
+    
+    .container {
+        flex-direction: column;
+    }
+
+    .showcase-wrapper p {
+        font-size: 55px;
+    }
+
+    .shoes-items,
+    .shirts-items,
+    .dresses-items {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-items {
+        flex-direction: column;
+    }
+
+    .about-info {
+        margin-bottom: 30px;
+    }
+
+    .feature-info {
+        flex-direction: column;
+    }
+
+    .feature-info div {
+        margin-bottom: 30px;
+    }
+
+    .feature-info button {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 20px 0;
+    }
+
+    .main-header {
+        margin-bottom: 15px;
+    }
+
+    .navbar > nav {
+        display: none;
+    }
+
+    .menu-wrapper {
+        display: block;
+    }
+
+    .showcase-wrapper p {
+        font-size: 35px;
+    }
+
+    .shoes-items,
+    .shirts-items,
+    .dresses-items {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        padding: 100px 61px;
+    }
+
+    .feature-products {
+        padding: 0 61px 100px;
+    }
+
+    footer {
+        padding: 30px 61px;
+    }
+
+    footer p {
+        text-align: center;
+    }
+}
